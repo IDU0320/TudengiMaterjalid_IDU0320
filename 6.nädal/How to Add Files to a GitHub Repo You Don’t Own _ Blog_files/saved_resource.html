@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!-- saved from url=(0356)https://disqus.com/recommendations/?base=default&f=ardalis&t_u=https%3A%2F%2Fardalis.com%2Fhow-to-add-files-to-a-github-repo-you-don%25E2%2580%2599t-own%2F&t_d=How%20to%20Add%20Files%20to%20a%20GitHub%20Repo%20You%20Don%E2%80%99t%20Own&t_t=How%20to%20Add%20Files%20to%20a%20GitHub%20Repo%20You%20Don%E2%80%99t%20Own#version=ebfb6efa9e61d3e8fa4ba7e418dab15c -->
+<html lang="en" dir="ltr" class="js no-touch localstorage sessionstorage contenteditable use-opacity-transitions"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Disqus Recommendations</title>
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <style>
+        .alert--warning {
+            border-radius: 3px;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            background-color: #FFE070;
+            color: #A47703;
+        }
+
+        .alert--warning a,
+        .alert--warning a:hover,
+        .alert--warning strong {
+            color: #A47703;
+            font-weight: bold;
+        }
+
+        .alert--error p,
+        .alert--warning p {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        
+        </style>
+    
+    <style>
+        
+        html {
+            overflow: hidden;
+        }
+        
+
+        #error {
+            display: none;
+        }
+
+        .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        
+    </style>
+
+<script crossorigin="anonymous" id="bootstrap-script" data-app="recommendations" src="./recommendations.load.ebfb6efa9e61d3e8fa4ba7e418dab15c.js"></script><meta http-equiv="Content-Security-Policy" content="script-src https:;"><script type="text/javascript" data-name="TokenSigning">(function() {
+    // Promises
+    var _eid_promises = {};
+    // Turn the incoming message from extension
+    // into pending Promise resolving
+    window.addEventListener("message", function(event) {
+        if (event.source !== window) return;
+        if (event.data.src && (event.data.src === "background.js")) {
+            console.log("Page received: ");
+            console.log(event.data);
+            // Get the promise
+            if (event.data.nonce) {
+                var p = _eid_promises[event.data.nonce];
+                // resolve
+                if (event.data.result === "ok") {
+                    if (event.data.signature !== undefined) {
+                        p.resolve({hex: event.data.signature});
+                    } else if (event.data.version !== undefined) {
+                        p.resolve(event.data.extension + "/" + event.data.version);
+                    } else if (event.data.cert !== undefined) {
+                        p.resolve({hex: event.data.cert});
+                    } else {
+                        console.log("No idea how to handle message");
+                        console.log(event.data);
+                    }
+                } else {
+                    // reject
+                    p.reject(new Error(event.data.result));
+                }
+                delete _eid_promises[event.data.nonce];
+            } else {
+                console.log("No nonce in event msg");
+            }
+        }
+    }, false);
+
+    window.TokenSigning = function() {
+        function nonce() {
+            var val = "";
+            var hex = "abcdefghijklmnopqrstuvwxyz0123456789";
+            for (var i = 0; i < 16; i++) val += hex.charAt(Math.floor(Math.random() * hex.length));
+            return val;
+        }
+
+        function messagePromise(msg) {
+            return new Promise(function(resolve, reject) {
+                // amend with necessary metadata
+                msg["nonce"] = nonce();
+                msg["src"] = "page.js";
+                // send message
+                window.postMessage(msg, "*");
+                // and store promise callbacks
+                _eid_promises[msg.nonce] = {
+                    resolve: resolve,
+                    reject: reject
+                };
+            });
+        }
+        this.getCertificate = function(options) {
+            var msg = {type: "CERT", lang: options.lang, filter: options.filter};
+            console.log("getCertificate()");
+            return messagePromise(msg);
+        };
+        this.sign = function(cert, hash, options) {
+            var msg = {type: "SIGN", cert: cert.hex, hash: hash.hex, hashtype: hash.type, lang: options.lang, info: options.info};
+            console.log("sign()");
+            return messagePromise(msg);
+        };
+        this.getVersion = function() {
+            console.log("getVersion()");
+            return messagePromise({
+                type: "VERSION"
+            });
+        };
+    };
+})();</script><link rel="stylesheet" href="./recommendations.10022a97346f1c6e3798931bbd8e4bb5.css"><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="recommendations/main" src="./recommendations.bundle.c32c8fc7358a20ee5907be6e81b685a8.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="remote/config" src="./config.js"></script><style type="text/css">@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&display=swap"); body.roboto , body.roboto input, body.roboto select, body.roboto textarea { font-family: Roboto, sans-serif; }</style></head>
+<body data-new-gr-c-s-check-loaded="14.1162.0" data-gr-ext-installed="" class="roboto light-anchor">
+    
+
+    
+    <div id="error" class="alert--error">
+        <p>We were unable to load Disqus Recommendations. If you are a moderator please see our <a href="https://docs.disqus.com/help/83/"> troubleshooting guide</a>. </p>
+    </div>
+
+    
+    <script type="text/json" id="disqus-forumData">{"session":{"canModerate":false,"audienceSyncVerified":false,"mustVerify":false,"canReply":true,"mustVerifyEmail":false},"forum":{"aetBannerConfirmation":null,"founder":"5467795","twitterName":"ardalis","commentsLinkOne":"1 Comment","guidelines":null,"favicon":{"permalink":"https://disqus.com/api/forums/favicons/ardalis.jpg","cache":"https://c.disquscdn.com/uploads/forums/124/7798/favicon.png"},"commentsLinkZero":"0 Comments","disableDisqusBranding":false,"id":"ardalis","createdAt":"2012-01-25T11:39:22.896679","category":"Tech","aetBannerEnabled":false,"aetBannerTitle":null,"raw_guidelines":null,"initialCommentCount":null,"votingType":null,"daysUnapproveNewUsers":null,"installCompleted":true,"moderatorBadgeText":"","commentPolicyText":null,"aetEnabled":false,"channel":null,"sort":4,"description":"\u003cp>Steve Smith's blog.\u003c/p>","newPolicy":true,"raw_description":"Steve Smith's blog.","customFont":null,"language":"en","adsReviewStatus":0,"commentsPlaceholderTextEmpty":null,"daysAlive":0,"forumCategory":{"date_added":"2016-01-28T01:54:31","id":8,"name":"Tech"},"linkColor":null,"colorScheme":"auto","pk":"1247798","commentsPlaceholderTextPopulated":null,"permissions":{},"commentPolicyLink":null,"aetBannerDescription":null,"name":"Ardalis","commentsLinkMultiple":"{num} Comments","settings":{"threadRatingsEnabled":false,"adsDRNativeEnabled":false,"behindClickEnabled":false,"disable3rdPartyTrackers":false,"adsVideoEnabled":false,"adsProductVideoEnabled":false,"adsPositionTopEnabled":false,"ssoRequired":false,"unapproveLinks":false,"adsPositionRecommendationsEnabled":true,"linkAffiliationEnabled":false,"adsProductLinksThumbnailsEnabled":false,"hasCustomAvatar":false,"organicDiscoveryEnabled":true,"adsProductDisplayEnabled":false,"adsProductLinksEnabled":false,"audienceSyncEnabled":false,"threadReactionsEnabled":true,"adsEnabled":false,"disableSocialShare":false,"allowAnonPost":true,"adsProductStoriesEnabled":false,"sidebarEnabled":false,"adultContent":false,"allowAnonVotes":false,"gifPickerEnabled":true,"mustVerify":true,"badgesEnabled":false,"mustVerifyEmail":true,"unapproveNewUsersEnabled":false,"mediaembedEnabled":true,"userIdentityDisabled":false,"adsPositionBottomEnabled":false,"discoveryLocked":false,"validateAllPosts":false,"adsSettingsLocked":false,"isVIP":false,"adsPositionInthreadEnabled":false},"organizationId":406418,"typeface":"auto","url":"http://ardalis.com/","daysThreadAlive":0,"avatar":{"small":{"permalink":"https://disqus.com/api/forums/avatars/ardalis.jpg?size=32","cache":"//a.disquscdn.com/1710323410/images/noavatar32.png"},"large":{"permalink":"https://disqus.com/api/forums/avatars/ardalis.jpg?size=92","cache":"//a.disquscdn.com/1710323410/images/noavatar92.png"}},"signedUrl":"http://disq.us/?url=http%3A%2F%2Fardalis.com%2F&key=oQbVOWqoifaU3H55k8cNow"}}</script>
+    <script type="text/json" id="disqus-recommendationSettings">{"maxAgeDays":0,"titleHidden":false,"placement":"top","recommendationsEnabled":true,"metaComments":true,"disableOverlay":false,"contentPreview":true,"metaDate":true,"id":81373}</script>
+
+    <div id="fixed-content"></div>
+
+
+    
+        
+        
+        <script>!function () {
+            var d = document;
+            var toH = d.head.appendChild.bind(d.head);
+
+            var v = window.location.href.match(/[#&?]version=([0-9a-f]{32})/);
+            var src = 'https://c.disquscdn.com/next/recommendations/recommendations.load';
+            if (v)
+                src += '.' + v[1];
+            src += '.js';
+
+            var s = d.createElement('script');
+            s.crossOrigin = 'anonymous';
+            s.id = 'bootstrap-script';
+            s.setAttribute('data-app', 'recommendations');
+            s.src = src;
+            toH(s);
+
+            var m = d.createElement('meta');
+            m.setAttribute('http-equiv', 'Content-Security-Policy');
+            m.setAttribute('content', "script-src https:;");
+            toH(m);
+        }();</script>
+    
+
+
+<script src="./common.bundle.7cc23efb3b28d49881e87b3f75f6026a.js"></script><div id="recommendations-layout" class="recommendations-layout" data-tracking-area="recommendations-layout"><div class="post-list" style="height: auto; visibility: visible;"><div class="recommendations-wrapper" style="width: 100%;"><div id="recommend-main-c9" class="recommend-main  "><section id="col-organic-c21" class="col-organic"><header id="recommendations-header" class="recommend-col-header"><h2 class="recommendations-unit-title">Also on <strong class="recommendations-forum">Ardalis</strong></h2></header><div class="recommendations-unit"><div class="recommendation-container"><button class="scroll-btn scroll-left" data-action="scroll-left" tabindex="-1">❮</button><div class="recommend-wrapper"><div class="recommend-posts" data-role="recommend-posts"><div class="recommend-post post-0" id="recommend-link-organic-9827637201" data-role="recommended-post" data-link="https://ardalis.com/mastering-unit-tests-dotnet-best-practices-naming-conventions/" tabindex="0"><header class="recommend-post-header"><div class="recommend-image-wrapper"><img src="./get" alt="Mastering Unit Tests in .NET: Best Practices and Naming Conventions" title="Mastering Unit Tests in .NET: Best Practices and Naming Conventions"><span class="overlay"></span></div><h3 class="recommend-post-title" title="Mastering Unit Tests in .NET: Best Practices and Naming Conventions"><span data-role="recommend-thread-title" class="title line-truncate" data-line-truncate="3" data-content="Mastering Unit Tests in .NET: Best Practices and Naming Conventions">Mastering Unit Tests in .NET: Best Practices …</span></h3></header><ul class="meta"><li class="time">7 months ago</li> <li class="comments">3 comments </li></ul><div class="content-preview-wrapper"><div class="recommend-content"><span data-role="recommend-description-snippet" class="line-truncate" data-line-truncate="5">Dive into the world of .NET unit tests with this comprehensive guide. …</span></div></div></div><div class="recommend-post post-1" id="recommend-link-organic-9988632267" data-role="recommended-post" data-link="https://ardalis.com/scaling-your-software-team-develop-vs-hiring/" tabindex="0"><header class="recommend-post-header"><div class="recommend-image-wrapper"><img src="./get" alt="Scaling Your Software Team: Development vs. Hiring" title="Scaling Your Software Team: Development vs. Hiring"><span class="overlay"></span></div><h3 class="recommend-post-title" title="Scaling Your Software Team: Development vs. Hiring"><span data-role="recommend-thread-title" class="title line-truncate" data-line-truncate="3" data-content="Scaling Your Software Team: Development vs. Hiring">Scaling Your Software Team: Development …</span></h3></header><ul class="meta"><li class="time">3 months ago</li> <li class="comments">1 comment </li></ul><div class="content-preview-wrapper"><div class="recommend-content"><span data-role="recommend-description-snippet" class="line-truncate" data-line-truncate="5">Scaling up and scaling out, originally application terms, offer a fresh perspective …</span></div></div></div><div class="recommend-post post-2" id="recommend-link-organic-9938473782" data-role="recommended-post" data-link="https://ardalis.com/new-course-refactoring-solid-csharp-code/" tabindex="0"><header class="recommend-post-header"><div class="recommend-image-wrapper"><img src="./get(1)" alt="New Course - Refactoring to SOLID C# Code" title="New Course - Refactoring to SOLID C# Code"><span class="overlay"></span></div><h3 class="recommend-post-title" title="New Course - Refactoring to SOLID C# Code"><span data-role="recommend-thread-title" class="title line-truncate" data-line-truncate="3" data-content="New Course - Refactoring to SOLID C# Code">New Course - Refactoring to SOLID …</span></h3></header><ul class="meta"><li class="time">4 months ago</li> <li class="comments">1 comment </li></ul><div class="content-preview-wrapper"><div class="recommend-content"><span data-role="recommend-description-snippet" class="line-truncate" data-line-truncate="5">I'm thrilled to announce the release of my latest Pluralsight course, …</span></div></div></div><div class="recommend-post post-3" id="recommend-link-organic-9807984853" data-role="recommended-post" data-link="https://ardalis.com/porting-moq-nsubstitute/" tabindex="0"><header class="recommend-post-header"><div class="recommend-image-wrapper"><img src="./get" alt="Porting Moq to NSubstitute" title="Porting Moq to NSubstitute"><span class="overlay"></span></div><h3 class="recommend-post-title" title="Porting Moq to NSubstitute"><span data-role="recommend-thread-title" class="title line-truncate" data-line-truncate="3" data-content="Porting Moq to NSubstitute">Porting Moq to NSubstitute</span></h3></header><ul class="meta"><li class="time">7 months ago</li> <li class="comments">7 comments </li></ul><div class="content-preview-wrapper"><div class="recommend-content"><span data-role="recommend-description-snippet" class="line-truncate" data-line-truncate="5">If for some reason you find yourself wanting to switch from Moq to another test …</span></div></div></div><div class="recommend-post post-4" id="recommend-link-organic-9405865587" data-role="recommended-post" data-link="https://ardalis.com/introducing-spectre-console/" tabindex="0"><header class="recommend-post-header"><div class="recommend-image-wrapper"><img src="./img-placeholder.df52e7638153b73862008d3d0556fdda.png" alt="Introducing Spectre.Console" title="Introducing Spectre.Console"><span class="overlay"></span></div><h3 class="recommend-post-title" title="Introducing Spectre.Console"><span data-role="recommend-thread-title" class="title line-truncate" data-line-truncate="3" data-content="Introducing Spectre.Console">Introducing Spectre.Console</span></h3></header><ul class="meta"><li class="time">a year ago</li> <li class="comments">4 comments </li></ul><div class="content-preview-wrapper"><div class="recommend-content"><span data-role="recommend-description-snippet" class="line-truncate" data-line-truncate="5">Spectre.Console is a dotnet library for making beautiful, more useful console …</span></div></div></div><div class="recommend-post post-5" id="recommend-link-organic-9547569240" data-role="recommended-post" data-link="https://ardalis.com/chrome-browser-tabs-to-links/" tabindex="0"><header class="recommend-post-header"><div class="recommend-image-wrapper"><img src="./img-placeholder.df52e7638153b73862008d3d0556fdda.png" alt="Chrome Browser Tabs to Links" title="Chrome Browser Tabs to Links"><span class="overlay"></span></div><h3 class="recommend-post-title" title="Chrome Browser Tabs to Links"><span data-role="recommend-thread-title" class="title line-truncate" data-line-truncate="3" data-content="Chrome Browser Tabs to Links">Chrome Browser Tabs to Links</span></h3></header><ul class="meta"><li class="time">a year ago</li> <li class="comments">2 comments </li></ul><div class="content-preview-wrapper"><div class="recommend-content"><span data-role="recommend-description-snippet" class="line-truncate" data-line-truncate="5">You have a bunch of tabs open from troubleshooting a problem. You just solved …</span></div></div></div><div class="recommend-post post-6" id="recommend-link-organic-9717161451" data-role="recommended-post" data-link="https://ardalis.com/latest-dotnet-roadmap/" tabindex="0"><header class="recommend-post-header"><div class="recommend-image-wrapper"><img src="./img-placeholder.df52e7638153b73862008d3d0556fdda.png" alt="What&#39;s the latest .NET roadmap?" title="What&#39;s the latest .NET roadmap?"><span class="overlay"></span></div><h3 class="recommend-post-title" title="What&#39;s the latest .NET roadmap?"><span data-role="recommend-thread-title" class="title line-truncate" data-line-truncate="3" data-content="What&#39;s the latest .NET roadmap?">What's the latest .NET roadmap?</span></h3></header><ul class="meta"><li class="time">9 months ago</li> <li class="comments">1 comment </li></ul><div class="content-preview-wrapper"><div class="recommend-content"><span data-role="recommend-description-snippet" class="line-truncate" data-line-truncate="5">Tools and links to find the current .NET roadmap, as well as view ongoing and …</span></div></div></div><div class="recommend-post post-7" id="recommend-link-organic-9907208420" data-role="recommended-post" data-link="https://ardalis.com/process-bloat-silent-killer-developer-productivity/" tabindex="0"><header class="recommend-post-header"><div class="recommend-image-wrapper"><img src="./get" alt="Process Bloat: The Silent Killer of Developer Productivity" title="Process Bloat: The Silent Killer of Developer Productivity"><span class="overlay"></span></div><h3 class="recommend-post-title" title="Process Bloat: The Silent Killer of Developer Productivity"><span data-role="recommend-thread-title" class="title line-truncate" data-line-truncate="3" data-content="Process Bloat: The Silent Killer of Developer Productivity">Process Bloat: The Silent Killer of …</span></h3></header><ul class="meta"><li class="time">5 months ago</li> <li class="comments">1 comment </li></ul><div class="content-preview-wrapper"><div class="recommend-content"><span data-role="recommend-description-snippet" class="line-truncate" data-line-truncate="5">Uncover how Process Bloat stealthily undermines your software development …</span></div></div></div></div></div><button class="scroll-btn scroll-right" data-action="scroll-right" tabindex="-1">❯</button></div></div></section></div></div></div></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
